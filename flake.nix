@@ -1,7 +1,7 @@
 # https://docs.haskellstack.org/en/stable/topics/nix_integration/
 
 {
-  description = "BLMTER";
+  description = "JSONisHardItShouldntBe";
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-25.05";
@@ -52,12 +52,7 @@
     devShells.default = pkgs.mkShell {
       buildInputs = [
         myDevTools
-        pkgs.hdf5
-        #pkgs.hdf5-threadsafe
-        pkgs.libffi
         pkgs.zlib
-        pkgs.lz4
-        pkgs.bzip2
       ];
   
       # Make external Nix C libraries like zlib known to GHC, like
